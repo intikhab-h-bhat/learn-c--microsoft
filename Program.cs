@@ -51,14 +51,24 @@
 
 
 
-string[] fradullentOrders= new string[3];
+using System.ComponentModel.DataAnnotations;
 
-fradullentOrders[0]= "A123";
-fradullentOrders[1]="B123";
-fradullentOrders[2]="C123";
+//string[] fradullentOrders= new string[3];
+
+//fradullentOrders[0]= "A123";
+//fradullentOrders[1]="B123";
+//fradullentOrders[2]="C123";
 //fradullentOrders[3] = "D123"; // Index  was outside the bonds 
-Console.WriteLine(fradullentOrders[0]);
-Console.WriteLine(fradullentOrders[1]);
-Console.WriteLine(fradullentOrders[2]);
+// Console.WriteLine(fradullentOrders[0]);
+// Console.WriteLine(fradullentOrders[1]);
+// Console.WriteLine(fradullentOrders[2]);
 
+string[] fraudulentOrderIDs = [ "A123", "B456", "C789" ];
 
+Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
+Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+
+fraudulentOrderIDs[0] = "F000";
+
+Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
