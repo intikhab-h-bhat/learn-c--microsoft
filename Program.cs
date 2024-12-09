@@ -63,12 +63,41 @@ using System.ComponentModel.DataAnnotations;
 // Console.WriteLine(fradullentOrders[1]);
 // Console.WriteLine(fradullentOrders[2]);
 
-string[] fraudulentOrderIDs = [ "A123", "B456", "C789" ];
+// string[] fraudulentOrderIDs = [ "A123", "B456", "C789" ];
 
-Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
-Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
-Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+// Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
+// Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+// Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
 
-fraudulentOrderIDs[0] = "F000";
+// fraudulentOrderIDs[0] = "F000";
 
-Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
+// Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
+
+//************foreach loop to itterate through array elements
+// string[] names={"Hello","How","Are","You"};
+
+// foreach(string name in names){
+//     Console.WriteLine(name);
+// }
+// int[] inventory=new int[] { 200, 450,700,175,250};
+
+// int sum=0;
+// int bin=0;
+// foreach(int items in inventory){
+    
+//     sum=sum+items;
+//     bin++;
+//     Console.WriteLine($"Bin {bin}={items} items (Running Total {sum})");
+// }
+//  Console.WriteLine(sum);
+
+
+//*************** code chalange***************
+
+string[] fradulentIds=["B123","c234","A345","C15","B177","G3003","C235","B179"];
+
+foreach(string fid in fradulentIds){
+    if(fid.StartsWith("B")){
+    Console.WriteLine(fid);
+    }
+}
