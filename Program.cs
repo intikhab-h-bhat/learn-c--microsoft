@@ -52,6 +52,7 @@
 
 
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 
 //string[] fradullentOrders= new string[3];
 
@@ -84,7 +85,7 @@ using System.ComponentModel.DataAnnotations;
 // int sum=0;
 // int bin=0;
 // foreach(int items in inventory){
-    
+
 //     sum=sum+items;
 //     bin++;
 //     Console.WriteLine($"Bin {bin}={items} items (Running Total {sum})");
@@ -127,22 +128,61 @@ converts the string to array and
 count the ocuurance of character o and then 
 convert back  to string and then prints the output
 */
-string str = "The quick brown fox jumps over the lazy dog.";
-// convert the message into a char array
-char[] charMessage = str.ToCharArray();
-Array.Reverse(charMessage);
+// string str = "The quick brown fox jumps over the lazy dog.";
+// // convert the message into a char array
+// char[] charMessage = str.ToCharArray();
+// Array.Reverse(charMessage);
 
-int x = 0;
-// count the o's
-foreach (char i in charMessage)
- { 
-    if (i == 'o')
-     {
-         x++;
-     } 
- }
-// convert it back to a string
-string new_message = new String(charMessage);
-// print it out
-Console.WriteLine(new_message);
-Console.WriteLine($"'o' appears {x} times.");
+// int x = 0;
+// // count the o's
+// foreach (char i in charMessage)
+//  { 
+//     if (i == 'o')
+//      {
+//          x++;
+//      } 
+//  }
+// // convert it back to a string
+// string new_message = new String(charMessage);
+// // print it out
+// Console.WriteLine(new_message);
+// Console.WriteLine($"'o' appears {x} times.");
+int currentAssignment=5;
+
+string[] studentNames=new string[]{"Mohammad","Basil","Huda","Zeenat"};
+
+int[] mohammadScores=[90,80,95,75,65];
+int[] basilScores=[95,80,85,65,65];
+int[] hudaScores=[65,70,85,95,60];
+int[] zeenatScores=[90,80,85,65,95];
+
+
+int basilSum=0;
+int hudaSum=0;
+int zeenatSum=0;
+
+
+decimal basilFinalScore;
+decimal hudaFinalScore;
+decimal zeenatFinalScore;
+
+foreach(string studentName in studentNames){
+
+    if(studentName.Equals("Mohammad"))
+    {
+        int mohamadSum=0;
+        decimal mohamadFinalScore;
+
+        foreach(int score in mohammadScores)
+        {
+            mohamadSum += score;
+        }   
+
+        mohamadFinalScore=(decimal)mohamadSum/currentAssignment;
+        Console.WriteLine("Student\t\tGrade\n");
+        Console.WriteLine($"{studentName}\t\t{mohamadFinalScore}\tA");
+    }
+}
+
+
+
