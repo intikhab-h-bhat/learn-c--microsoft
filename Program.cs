@@ -156,6 +156,7 @@ int[] basilScores=[95,80,85,65,65];
 int[] hudaScores=[65,70,85,95,60];
 int[] zeenatScores=[90,80,85,65,95];
 
+int[] studentScores = new int[10];
 
 int basilSum=0;
 int hudaSum=0;
@@ -168,20 +169,33 @@ decimal zeenatFinalScore;
 
 foreach(string studentName in studentNames){
 
-    if(studentName.Equals("Mohammad"))
-    {
-        int mohamadSum=0;
-        decimal mohamadFinalScore;
+    string currentStudent=studentName;
 
-        foreach(int score in mohammadScores)
+    if(currentStudent=="Mohammad")    
+        studentScores = mohammadScores;
+
+    else if(currentStudent=="Basil")
+        studentScores = basilScores;
+
+    else if(currentStudent=="Huda")
+        studentScores = hudaScores; 
+
+    else if(currentStudent=="Zeenat")
+        studentScores = zeenatScores; 
+
+       int sumAssignmentScores = 0;
+
+       decimal currentStudentGrade = 0;
+       
+        foreach(int score in studentScores)
         {
-            mohamadSum += score;
+            sumAssignmentScores += score;
         }   
 
-        mohamadFinalScore=(decimal)mohamadSum/currentAssignment;
+        currentStudentGrade=(decimal)sumAssignmentScores/currentAssignment;
         Console.WriteLine("Student\t\tGrade\n");
-        Console.WriteLine($"{studentName}\t\t{mohamadFinalScore}\tA");
-    }
+        Console.WriteLine($"{studentName}\t\t{currentStudentGrade}\tA");
+    
 }
 
 
